@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -71,14 +71,38 @@
           <a class="dropdown-item" href="#">liste des auteurs</a>
           <a class="dropdown-item" href="#">ajouter un auteur</a>
           <a class="dropdown-item" href="#">rechercher un auteur</a>
-
-        </div><li class="nav-item dropdown">
+        </div>
+        </li>
+        <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><i class="fa-regular fa-flag"></i> Gestion des nationnalités</a>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="listeNationalites.php">liste des nationalités</a>
           <a class="dropdown-item" href="formAjoutNat.php">ajouter une nationalité</a>
         </div>
       </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-person"></i> Gestion des Continents</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="index.php?uc=continents">liste des Continents</a>
+          <a class="dropdown-item" href="#">ajouter un Continent</a>
+        </div>
+        </li>
     </ul>
   </div>
 </nav>
+
+<?php
+if(!empty($_SESSION['message'])){
+    $mesmessages=$_SESSION['message'];
+    foreach($mesmessages as $key=>$message){
+      echo ' <div class="container pt-5">
+                <div class="alert alert-'.$key.' alert-dismissible fade show" role="alert">'.$message.'
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+              </div>';
+    }
+$_SESSION['message']=[];
+}
+?>
