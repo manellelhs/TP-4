@@ -36,4 +36,6 @@
 
 </script>
   </body>
-</html>
+</html> 
+<?php ob_end_flush(); ?>
+

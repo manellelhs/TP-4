@@ -81,10 +81,10 @@
         </div>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-person"></i> Gestion des Continents</a>
+        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-globe"></i> Gestion des Continents</a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="index.php?uc=continents">liste des Continents</a>
-          <a class="dropdown-item" href="#">ajouter un Continent</a>
+          <a class="dropdown-item" href="index.php?uc=continents&action=list">liste des Continents</a>
+          <a class="dropdown-item" href="index.php?uc=continents&action=add">ajouter un Continent</a>
         </div>
         </li>
     </ul>
