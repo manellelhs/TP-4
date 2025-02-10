@@ -1,5 +1,5 @@
 <?php 
-
+//manelle1
 $action=$_GET['action'];
 switch($action)
 {
