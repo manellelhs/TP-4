@@ -62,22 +62,22 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-book"></i> Gestion des genres</a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">liste des genres</a>
-          <a class="dropdown-item" href="#">ajouter un genre</a>
+          <a class="dropdown-item" href="index.php?uc=genre&action=list">liste des genres</a>
+          <a class="dropdown-item" href="index.php?uc=genre&action=add">ajouter un genre</a>
         </div>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-person"></i> Gestion des auteurs</a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">liste des auteurs</a>
-          <a class="dropdown-item" href="#">ajouter un auteur</a>
+          <a class="dropdown-item" href="index.php?uc=auteur&action=list">liste des auteurs</a>
+          <a class="dropdown-item" href="index.php?uc=auteur&action=add">ajouter un auteur</a>
           <a class="dropdown-item" href="#">rechercher un auteur</a>
         </div>
         </li>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"><i class="fa-regular fa-flag"></i> Gestion des nationnalités</a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="listeNationalites.php">liste des nationalités</a>
-          <a class="dropdown-item" href="formAjoutNat.php">ajouter une nationalité</a>
+          <a class="dropdown-item" href="index.php?uc=nationalite&action=list">liste des nationalités</a>
+          <a class="dropdown-item" href="index.php?uc=nationalite&action=add">ajouter une nationalité</a>
         </div>
       </li>
       <li class="nav-item dropdown">

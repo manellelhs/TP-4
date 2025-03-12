@@ -1,6 +1,4 @@
-
-<div class="container" style="margin: 7% auto auto 14%">
-    
+ 
     <div class="row pt-3">
         <div class="col-9">
             <h2>LISTE D'AUTEUR</h2>
@@ -16,6 +14,8 @@
             <th scope="col" class="col-md-4">Nom</th>
             <th scope="col" class="col-md-3">Prénom</th>
             <th scope="col" class="col-md-3">Nationalité</th>
+            <th scope="col" class="col-md-2">Actions</th>
+
             </tr>
         </thead>
     <tbody>
