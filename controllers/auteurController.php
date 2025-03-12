@@ -21,9 +21,12 @@ switch($action){
         case 'delete':
             $auteur=Auteur::findById($_GET['num']);
             $nb=Auteur::delete($auteur);
-            if($nb==1){
+            if($nb==1)
+            {
                 $_SESSION['message']=["success"=>"L'auteur a bien été supprimé"];
-            }else{
+            }
+            else
+            {
                 $_SESSION['message']=["danger"=>"L'auteur n'a pas été supprimé"];
             }
             header('location:index.php?uc=auteur&action=list');
@@ -31,7 +34,8 @@ switch($action){
 
         case 'valideForm':
             $auteur=new Auteur();
-            if(empty($_POST['num'])){
+            if(empty($_POST['num']))
+            {
                 $auteur->setNom($_POST['nom']);
                 $auteur->setPrenom($_POST['prenom']);
                 $nation=Nationalite::findById($_POST['nationalite']);
@@ -39,7 +43,9 @@ switch($action){
 
                 $nb=Auteur::add($auteur);
                 $message ="AJOUTE"; 
-            }else{
+            }
+            else
+            {
                 $auteur->setNum($_POST['num']);
                 $auteur->setNom($_POST['nom']);
                 $auteur->setPrenom($_POST['prenom']);
@@ -50,9 +56,12 @@ switch($action){
                 $nb=Auteur::update($auteur);
                 $message ="MODIFIE";
             }
-            if($nb==1){
+            if($nb==1)
+            {
                 $_SESSION['message']=["success"=>"L'auteur a bien été $message"];
-            }else{
+            }
+            else
+            {
                 $_SESSION['message']=["danger"=>"L'auteur n'a pas été $message"];
             }
             header('location:index.php?uc=auteurs&action=list');

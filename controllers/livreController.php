@@ -20,9 +20,12 @@ switch($action){
         case 'delete';
             $livre=Livre::findById($_GET['num']);
             $nb=Livre::delete($livre);
-            if($nb==1){
+            if($nb==1)
+            {
                 $_SESSION['message']=["success"=>"Le livre a été supprimé"];
-            }else{
+            } 
+            else
+            {
                 $_SESSION['message']=["danger"=>"Le livre n'a pas été supprimé"];
             }
             header('location:index.php?uc=livre&action=list');
@@ -30,19 +33,25 @@ switch($action){
 
         case 'valideForm';
             $livre=new Livre();
-            if(empty($_POST['num'])){
+            if(empty($_POST['num']))
+            {
                 $livre->setTitre($_POST['titre']);
                 $nb=Livre::add($livre);
                 $message ="AJOUTER"; 
-            }else{
+            }
+            else
+            {
                 $livre->setNum($_POST['num']);
                 $livre->setTitre($_POST['titre']);
                 $nb=Livre::update($livre);
                 $message ="MODIFIER";
             }
-            if($nb==1){
+            if($nb==1)
+            {
                 $_SESSION['message']=["success"=>"Le livre a  été $message"];
-            }else{
+            } 
+            else
+            {
                 $_SESSION['message']=["danger"=>"Le livre n'a pas été $message"];
             }
             header('location:index.php?uc=livre&action=list');
